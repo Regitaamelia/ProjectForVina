@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+      body {
+        background-image: url("assets/g10.jpg");
+        /* background-repeat: repeat;
+        background-size: cover; */
+        font-family: "Poppins", sans-serif;
+      }
+
+      #btn-alert {
+        border-color: #c12c2c;
+        border-width: 4px;
+        border-radius: 7px;
+        padding: 10px 20px;
+        background-color: rgb(231, 210, 69);
+        font-size: 1.3em;
+        color: #c12c2c;
+        cursor: pointer;
+        transition: 0.2s;
+        position: fixed;
+        left: 50%;
+        top: 45%;
+        box-shadow: 0px 0px 30px 35px rgba(240, 233, 233, 0.8);
+      }
+
+      #btn-alert:hover {
+        opacity: 0.8;
+      }
+
+      #btn-alert:focus {
+        outline: rgb(231, 210, 69) solid 3px;
+        outline-offset: 3px;
+      }
+
+      @media (max-width: 576px) {
+        #btn-alert {
+          left: 38%;
+        }
+      }
+    </style>
+
+    <title>Happy Birthday Kawan</title>
+  </head>
+
+  <body>
+    <button id="btn-alert" onclick="munculinAlert()"><b>Klik Aku!</b></button>
+
+    <script>
+      async function munculinAlert() {
+        await Swal.fire({
+          title: "Hai Vinaa",
+          text: "*Member Ternak Kalkun Tersayang",
+          background: "#FFF0F5",
+          confirmButtonColor: "#BC8F8F",
+        });
+        await Swal.fire({
+          title: "Aku mau bilang sesuatu, tapi klik 'OK' lagi yaa..",
+          background: "#FFF0F5",
+          confirmButtonColor: "#BC8F8F",
+        });
+        await Swal.fire({
+          title: "Happy Level Up",
+          text: "Semoga Keinginanmu Semua Tercapai Yaa, Meskipun Harus 1/1 Duluu",
+          imageUrl: "assets/g1.jpg",
+          imageWidth: 250,
+          imageHeight: 300,
+          background: "#FFE4E1",
+          confirmButtonColor: "#F08080",
+        });
+        await Swal.fire({
+          title: "Oiyaa, Baca Ini Baik-baik Yaa. Klik 'OK' dulu lagi hehee...",
+          background: "#FFF0F5",
+          confirmButtonColor: "#BC8F8F",
+        });
+        await Swal.fire({
+          text: "Vinaa, tetep jadi pribadi yg menyenangkan yaa, ramah, dan baikk. Tbh Vin, ada beberapa hal yg aku iri dari kamu, sayangnya gabisa aku bilang. Mungkin next time, klo ada kesempatan ya Vin. Tapi perlu kamu tau, hal itu gaakan buat Gita ga sayang Vina. Terima kasih juga sudah mau menjadi temanku di akhir kehidupan perkuliahan. ❤️ banyak-banyakkk!!. Sorry klo berlebihan inii",
+          imageUrl: "assets/g12.jpg",
+          imageWidth: 220,
+          imageHeight: 300,
+          background: "#FFE4E1",
+          confirmButtonColor: "#F08080",
+        });
+        await Swal.fire({
+          title: "Kamu Suka Ngga???",
+          text: "Dijawab yg jujur yaa...",
+          icon: "question",
+          showDenyButton: true,
+          background: "#FFF8DC",
+          confirmButtonColor: "#FFA07A",
+          confirmButtonText: "Sukaa Poolll!!",
+          denyButtonText: `Kurang Suka!!`,
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({
+              title: "Okedah, Mission Success",
+              text: "Makasih Sudah Berkenan Membaca, hehehee",
+              background: "#FFF0F5",
+              confirmButtonColor: "#BC8F8F",
+              imageUrl: "assets/g3.jpg",
+              imageWidth: 300,
+              imageHeight: 300,
+            });
+          } else {
+            Swal.fire({
+              icon: "error",
+              title: "Hadeh, Mission Failed",
+              text: "Yah, sorry Vinn klo kamu kurang suka 😢",
+              background: "#FFF0F5",
+              confirmButtonColor: "#BC8F8F",
+            });
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
